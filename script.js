@@ -7,6 +7,25 @@ document.getElementById('year').textContent = new Date().getFullYear();
 let currentLang = localStorage.getItem('sqs-lang') || 'es';
 
 /* =========================================================
+   0. PRELOADER (tech boot sequence)
+   ========================================================= */
+function hidePreloader() {
+  const preloader = document.getElementById('preloader');
+  if (!preloader) return;
+  preloader.classList.add('done');
+  document.body.style.overflow = '';
+  setTimeout(() => preloader.remove(), 700);
+}
+document.body.style.overflow = 'hidden';
+window.addEventListener('load', () => {
+  setTimeout(hidePreloader, 1700);
+});
+/* fallback in case 'load' fires very late (slow assets) */
+setTimeout(() => {
+  if (document.getElementById('preloader')) hidePreloader();
+}, 4500);
+
+/* =========================================================
    1. HERO PHOTO FALLBACK
    ========================================================= */
 (function heroPhoto() {
@@ -276,6 +295,11 @@ initRevealObserver();
    6. I18N DICTIONARY + LANGUAGE SWITCHING (ES / EN)
    ========================================================= */
 const I18N = {
+  'preloader.line1': { es: '&gt; iniciando sistema', en: '&gt; booting system' },
+  'preloader.line2': { es: '&gt; cargando módulos: ui.js, i18n.js, style.css', en: '&gt; loading modules: ui.js, i18n.js, style.css' },
+  'preloader.line3': { es: '&gt; conectando con <span class="accent-cyan">sofia974</span>', en: '&gt; connecting to <span class="accent-cyan">sofia974</span>' },
+  'preloader.line4': { es: '&gt; acceso concedido <span class="accent-green">[OK]</span>', en: '&gt; access granted <span class="accent-green">[OK]</span>' },
+
   'nav.home': { es: 'Inicio', en: 'Home' },
   'nav.about': { es: 'Sobre mí', en: 'About' },
   'nav.experience': { es: 'Experiencia', en: 'Experience' },
