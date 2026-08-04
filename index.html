@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sofia Quispe Salas // Portafolio</title>
+<meta name="description" content="Portafolio de Sofia Quispe Salas — Ingeniera de Sistemas, especialista en Data Analytics, RPA y desarrollo de software.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div class="grid-overlay" aria-hidden="true"></div>
+
+<button id="theme-toggle" aria-label="Cambiar tema" title="Cambiar tema">
+  <span id="theme-icon">◐</span>
+</button>
+
+<div id="lang-toggle" class="lang-toggle" role="group" aria-label="Idioma / Language">
+  <button type="button" class="lang-btn active" data-lang="es">ES</button>
+  <button type="button" class="lang-btn" data-lang="en">EN</button>
+</div>
+
+<nav id="navbar">
+  <a href="#home" class="nav-logo">Sofia<span class="accent-cyan">.</span></a>
+  <ul class="nav-links">
+    <li><a href="#home" data-i18n="nav.home">Inicio</a></li>
+    <li><a href="#about" data-i18n="nav.about">Sobre mí</a></li>
+    <li><a href="#experience" data-i18n="nav.experience">Experiencia</a></li>
+    <li><a href="#projects" data-i18n="nav.projects">Proyectos</a></li>
+    <li><a href="#contact" data-i18n="nav.contact">Contacto</a></li>
+  </ul>
+  <a href="#contact" class="btn btn-primary nav-cta" data-i18n="nav.cta">Hablemos</a>
+  <button id="nav-toggle" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section id="home" class="section hero">
+  <div class="hero-video-bg" id="hero-video-bg">
+    <video id="hero-video" autoplay muted loop playsinline preload="auto" poster="video/hero-poster.jpg">
+      <source src="img/video-fondo.mp4" type="video/mp4">
+    </video>
+    <div class="hero-video-overlay"></div>
+  </div>
+
+  <div class="hero-inner">
+    <div class="hero-text reveal">
+      <p class="eyebrow" data-i18n="hero.eyebrow">// Especialista TI</p>
+      <h1 class="hero-title"><span data-i18n="hero.greeting">Hola, soy</span><br><span class="accent-cyan">Sofia Quispe Salas</span></h1>
+      <p class="hero-role">&gt; <span id="role-typed"></span><span class="type-cursor">|</span></p>
+      <p class="hero-desc" data-i18n="hero.desc">
+        Ingeniería de Sistemas, egresada en el Décimo Superior
+        de la Universidad. Combino análisis de datos, automatización
+        de procesos (RPA) e inteligencia artificial para construir soluciones que
+        resuelven problemas reales en diferentes sectores como minería y tecnología.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary" data-i18n="hero.ctaProjects">Ver proyectos</a>
+        <a href="#contact" class="btn btn-outline" data-i18n="hero.ctaContact">Contáctame</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/sofia974/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 4.94 3.2 9.13 7.66 10.61.56.1.76-.24.76-.54 0-.27-.01-1.15-.02-2.08-3.12.68-3.78-1.34-3.78-1.34-.51-1.3-1.24-1.65-1.24-1.65-1.02-.7.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15 1 1.72 2.62 1.22 3.26.93.1-.73.39-1.22.71-1.5-2.49-.28-5.11-1.25-5.11-5.55 0-1.23.44-2.23 1.15-3.02-.12-.28-.5-1.42.11-2.96 0 0 .94-.3 3.08 1.15a10.6 10.6 0 0 1 5.6 0c2.14-1.45 3.08-1.15 3.08-1.15.61 1.54.23 2.68.11 2.96.72.79 1.15 1.79 1.15 3.02 0 4.31-2.63 5.26-5.13 5.54.4.35.76 1.03.76 2.08 0 1.5-.01 2.71-.01 3.08 0 .3.2.65.77.54A11.03 11.03 0 0 0 23.02 11.5C23.02 5.24 18.27.5 12 .5z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/sofia-quispe-salas/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+        </a>
+        <a href="mailto:sofiaquispesalas841@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M2 4h20a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm19.4 2.4-9.4 7-9.4-7A1 1 0 0 0 2 6.5v.7l10 7.4 10-7.4v-.7a1 1 0 0 0-.6-.1z"/></svg>
+        </a>
+        <a href="tel:+51974305311" aria-label="Teléfono">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.24.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-photo-wrap reveal">
+      <div class="hero-photo-frame" id="photo-frame">
+        <img src="img/foto-user.png" alt="Foto de Sofia Quispe Salas" id="hero-photo">
+        <div class="hero-photo-fallback"><span>SQ</span></div>
+      </div>
+      <div class="hero-badge">
+        <span class="pulse-dot"></span> <span data-i18n="hero.badge">Disponible para nuevas oportunidades</span>
+      </div>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-hint" aria-label="Bajar a la siguiente sección">
+    <span>scroll</span>
+    <div class="arrow"></div>
+  </a>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="section">
+  <span class="section-tag reveal" data-i18n="about.tag">Sobre mí</span>
+  <h2 class="section-title reveal" data-i18n="about.title">Quién soy y qué hago</h2>
+
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <p data-i18n="about.p1">
+        Soy <strong>Sofia Yamilet Quispe Salas</strong>, Ingeniera de Sistemas, con formación complementaria
+        en ciencia de datos (Diplomado UCSP), inteligencia artificial y business intelligence
+        (Diplomado UNI).
+      </p>
+      <p data-i18n="about.p2">
+        Tengo experiencia en análisis de datos, automatización de procesos (RPA) y desarrollo
+        de software aplicado a los sectores minero y tecnológico. Me especializo en resolver
+        problemas mediante soluciones innovadoras basadas en datos, con un enfoque
+        <span class="accent-pink">investigador, analítico y orientado a resultados</span>.
+      </p>
+      <p data-i18n="about.p3">
+        Trabajo cómodamente con herramientas de IA generativa como <strong>Claude Code</strong>,
+        <strong>ChatGPT</strong> y <strong>Gemini</strong>, integrándolas en mi flujo de desarrollo
+        para acelerar la resolución de problemas y construir soluciones más inteligentes.
+      </p>
+
+      <div class="skills-tags">
+        <span class="tag">Python</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">C#</span>
+        <span class="tag">SQL Server</span>
+        <span class="tag">MySQL</span>
+        <span class="tag">MongoDB</span>
+        <span class="tag">Power BI</span>
+        <span class="tag">Power Automate</span>
+        <span class="tag">Django</span>
+        <span class="tag">Azure</span>
+        <span class="tag">SharePoint</span>
+        <span class="tag">Automation Anywhere</span>
+        <span class="tag">Claude Code</span>
+        <span class="tag">ChatGPT</span>
+        <span class="tag">Gemini</span>
+      </div>
+    </div>
+
+    <div class="about-skills reveal">
+      <h3 data-i18n="about.skillsTitle">Nivel de dominio</h3>
+      <div class="skill-bars">
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span>Power BI</span><span class="skill-percent" data-i18n="level.advanced">Avanzado</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill fill-cyan" data-level="92"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span>SharePoint / Excel</span><span class="skill-percent" data-i18n="level.advanced">Avanzado</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill fill-pink" data-level="90"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span>Python</span><span class="skill-percent" data-i18n="level.intermediate">Intermedio</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill fill-green" data-level="72"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span>SQL Server / MySQL</span><span class="skill-percent" data-i18n="level.intermediate">Intermedio</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill fill-cyan" data-level="72"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span>Power Automate / Apps</span><span class="skill-percent" data-i18n="level.intermediate">Intermedio</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill fill-pink" data-level="70"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span>Cloud (Azure)</span><span class="skill-percent" data-i18n="level.intermediate">Intermedio</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill fill-green" data-level="65"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span>IA Generativa (Claude, ChatGPT, Gemini)</span><span class="skill-percent" data-i18n="level.advanced">Avanzado</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill fill-pink" data-level="90"></div></div>
+        </div>
+      </div>
+      <p class="lang-note" data-i18n="about.langNote">Inglés — Nivel intermedio</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="section stats-section">
+  <div class="stats-grid">
+    <div class="stat-card reveal">
+      <span class="stat-number" data-target="10">0</span><span class="accent-cyan">+</span>
+      <p class="stat-label" data-i18n="stats.projects">proyectos y roles</p>
+    </div>
+    <div class="stat-card reveal">
+      <span class="stat-number" data-target="20">0</span><span class="accent-pink">+</span>
+      <p class="stat-label" data-i18n="stats.tech">tecnologías dominadas</p>
+    </div>
+    <div class="stat-card reveal">
+      <span class="stat-number" data-target="3">0</span><span class="accent-green">+</span>
+      <p class="stat-label" data-i18n="stats.years">años de experiencia</p>
+    </div>
+    <div class="stat-card reveal">
+      <span class="stat-number" data-target="4">0</span><span class="accent-cyan">+</span>
+      <p class="stat-label" data-i18n="stats.diplomas">diplomados y certificaciones</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience" class="section">
+  <span class="section-tag reveal" data-i18n="exp.tag">Trayectoria</span>
+  <h2 class="section-title reveal" data-i18n="exp.title">Experiencia profesional</h2>
+  <p class="section-subtitle reveal" data-i18n="exp.subtitle">Un resumen de mis roles más recientes en minería, tecnología y ciberseguridad</p>
+
+  <div class="experience-layout">
+  <div class="timeline">
+    <div class="timeline-item reveal">
+      <span class="timeline-dot"></span>
+      <div class="timeline-head">
+        <span class="timeline-role">RPA Engineer</span>
+        <span class="timeline-period">01/2026 – 06/2026</span>
+      </div>
+      <p class="timeline-company" data-i18n="exp1.company">Software Enterprise Services · Cliente Costa Rica</p>
+      <p class="timeline-desc" data-i18n="exp1.desc">Bot de automatización documental con Document Automation, flujo ETL a SQL Server, dashboard en Power BI y scripts en Python integrados con la API de Gemini.</p>
+    </div>
+
+    <div class="timeline-item reveal">
+      <span class="timeline-dot"></span>
+      <div class="timeline-head">
+        <span class="timeline-role">Data Analyst &amp; Software Developer</span>
+        <span class="timeline-period">02/2025 – 05/2025 y 02/2026 – 05/2026</span>
+      </div>
+      <p class="timeline-company">Minera Titan del Perú · MC Consultoría</p>
+      <p class="timeline-desc" data-i18n="exp2.desc">Análisis de datos geológicos, script en Python para importación automática a DATAMINE y RPA para organización de carpetas y envío de correos.</p>
+    </div>
+
+    <div class="timeline-item reveal">
+      <span class="timeline-dot"></span>
+      <div class="timeline-head">
+        <span class="timeline-role">Trainee Cybersecurity</span>
+        <span class="timeline-period">05/2025 – 04/2026</span>
+      </div>
+      <p class="timeline-company">Minera Las Bambas</p>
+      <p class="timeline-desc" data-i18n="exp3.desc">Análisis de riesgos de ciberseguridad y gestión de vulnerabilidades en Rapid7, bajo marcos ISO 27001 y NIST.</p>
+    </div>
+
+    <div class="timeline-item reveal">
+      <span class="timeline-dot"></span>
+      <div class="timeline-head">
+        <span class="timeline-role">RPA Engineer</span>
+        <span class="timeline-period">10/2025 – 12/2025</span>
+      </div>
+      <p class="timeline-company" data-i18n="exp4.company">Mora Technology · Cliente México</p>
+      <p class="timeline-desc" data-i18n="exp4.desc">Web scraping en Python, automatización de ingreso de datos con Power Automate y generación de reportes con Pandas.</p>
+    </div>
+
+    <div class="timeline-item reveal">
+      <span class="timeline-dot"></span>
+      <div class="timeline-head">
+        <span class="timeline-role">Data Analyst &amp; Software Developer</span>
+        <span class="timeline-period">01/2025 – 05/2025</span>
+      </div>
+      <p class="timeline-company">CODEa UNI</p>
+      <p class="timeline-desc" data-i18n="exp5.desc">Modelos predictivos para flota de camiones mineros en Python y backend de plataforma web con Django y PostgreSQL.</p>
+    </div>
+
+    <div class="timeline-item reveal">
+      <span class="timeline-dot"></span>
+      <div class="timeline-head">
+        <span class="timeline-role" data-i18n="exp6.role">Administración de Base de Datos</span>
+        <span class="timeline-period">02/2024 – 02/2025</span>
+      </div>
+      <p class="timeline-company">Compañía Minera Antamina</p>
+      <p class="timeline-desc" data-i18n="exp6.desc">Gestión de SQL Server, automatización con Power Automate y SharePoint, y dashboards en Power BI para la Gerencia de Geología.</p>
+    </div>
+
+    <div class="timeline-item reveal">
+      <span class="timeline-dot"></span>
+      <div class="timeline-head">
+        <span class="timeline-role" data-i18n="exp7.role">Aplicaciones Empresariales</span>
+        <span class="timeline-period">01/2023 – 03/2023</span>
+      </div>
+      <p class="timeline-company">Anglo American Quellaveco</p>
+      <p class="timeline-desc" data-i18n="exp7.desc">Acompañamiento en gestión de proyectos tecnológicos y automatización de procesos con Power Automate.</p>
+    </div>
+  </div>
+
+  <div class="exp-visual reveal" aria-hidden="true">
+    <div class="radar">
+      <div class="radar-ring ring-1"></div>
+      <div class="radar-ring ring-2"></div>
+      <div class="radar-ring ring-3"></div>
+      <div class="radar-sweep"></div>
+      <div class="radar-core">&lt;/&gt;</div>
+      <span class="radar-chip chip-1">Python</span>
+      <span class="radar-chip chip-2">SQL</span>
+      <span class="radar-chip chip-3">RPA</span>
+      <span class="radar-chip chip-4">Power BI</span>
+    </div>
+
+    <div class="exp-console">
+      <div class="exp-console-bar">
+        <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+      </div>
+      <div class="exp-console-body">
+        <span id="exp-console-line"></span><span class="type-cursor">|</span>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects" class="section">
+  <span class="section-tag reveal" data-i18n="proj.tag">Portafolio</span>
+  <h2 class="section-title reveal" data-i18n="proj.title">Proyectos y logros</h2>
+  <p class="section-subtitle reveal" data-i18n="proj.subtitle">Click en una tarjeta para ver más detalles</p>
+
+  <div class="projects-grid" id="projects-grid"></div>
+</section>
+
+<!-- Project detail modal -->
+<div id="project-modal" class="modal-overlay">
+  <div class="modal-box">
+    <button class="modal-close" id="modal-close" aria-label="Cerrar">✕</button>
+    <div class="modal-content" id="modal-content"></div>
+  </div>
+</div>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="section">
+  <span class="section-tag reveal" data-i18n="contact.tag">Contacto</span>
+  <h2 class="section-title reveal" data-i18n="contact.title">Hablemos de tu proyecto</h2>
+
+  <div class="contact-grid">
+    <form id="contact-form" class="contact-form reveal" novalidate>
+      <div class="form-group">
+        <label for="name" data-i18n="contact.name">Nombre</label>
+        <input type="text" id="name" name="name" placeholder="Tu nombre" data-i18n-placeholder="contact.namePh" required autocomplete="name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="tu@email.com" required autocomplete="email">
+      </div>
+      <div class="form-group">
+        <label for="message" data-i18n="contact.message">Mensaje</label>
+        <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje aquí..." data-i18n-placeholder="contact.messagePh" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary btn-submit" data-i18n="contact.submit">Enviar mensaje</button>
+      <p id="form-status" class="form-status" aria-live="polite"></p>
+    </form>
+
+    <div class="contact-links reveal">
+      <a href="https://github.com/sofia974/" target="_blank" rel="noopener noreferrer" class="social-link">
+        <span class="social-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 4.94 3.2 9.13 7.66 10.61.56.1.76-.24.76-.54 0-.27-.01-1.15-.02-2.08-3.12.68-3.78-1.34-3.78-1.34-.51-1.3-1.24-1.65-1.24-1.65-1.02-.7.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15 1 1.72 2.62 1.22 3.26.93.1-.73.39-1.22.71-1.5-2.49-.28-5.11-1.25-5.11-5.55 0-1.23.44-2.23 1.15-3.02-.12-.28-.5-1.42.11-2.96 0 0 .94-.3 3.08 1.15a10.6 10.6 0 0 1 5.6 0c2.14-1.45 3.08-1.15 3.08-1.15.61 1.54.23 2.68.11 2.96.72.79 1.15 1.79 1.15 3.02 0 4.31-2.63 5.26-5.13 5.54.4.35.76 1.03.76 2.08 0 1.5-.01 2.71-.01 3.08 0 .3.2.65.77.54A11.03 11.03 0 0 0 23.02 11.5C23.02 5.24 18.27.5 12 .5z"/></svg>
+        </span>
+        <span>github.com/sofia974</span>
+      </a>
+      <a href="https://www.linkedin.com/in/sofia-quispe-salas/" target="_blank" rel="noopener noreferrer" class="social-link">
+        <span class="social-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+        </span>
+        <span>linkedin.com/in/sofia-quispe-salas</span>
+      </a>
+      <a href="mailto:sofiaquispesalas841@gmail.com" class="social-link">
+        <span class="social-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M2 4h20a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm19.4 2.4-9.4 7-9.4-7A1 1 0 0 0 2 6.5v.7l10 7.4 10-7.4v-.7a1 1 0 0 0-.6-.1z"/></svg>
+        </span>
+        <span>sofiaquispesalas841@gmail.com</span>
+      </a>
+      <a href="tel:+51974305311" class="social-link">
+        <span class="social-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.24.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg>
+        </span>
+        <span>+51 974 305 311</span>
+      </a>
+
+      <div class="status-note">
+        <span class="pulse-dot"></span> <span data-i18n="contact.statusNote">Abierta a colaboraciones, freelance y nuevas oportunidades.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; <span id="year"></span> Sofia Quispe Salas — <span data-i18n="footer.text">construido con <span class="accent-green">&lt;/&gt;</span> y café</span></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
