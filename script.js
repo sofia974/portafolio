@@ -569,7 +569,7 @@ const projectsData = [
     },
     description: {
       es: 'Diseño y desarrollo de scripts de automatización en Python integrados con la API de Shopify, Playwright y Selenium para ejecutar procesos batch: carga masiva de productos, actualización de precios e inventario, sincronización de catálogo y validación de datos. La solución ejecuta tareas programadas de forma desatendida, con manejo de errores y reportes automáticos de resultados.',
-      en: 'Designed and developed Python automation scripts integrated with the Shopify API, Playwright and Selenium to run batch processes: bulk product uploads, price and inventory updates, catalog synchronization, and data validation. The solution runs scheduled tasks unattended, with error handling and automatic result reporting.'
+      en: 'Designed and developed Python automation scripts integrated with the Shopify, Playwright and Selenium to run batch processes: bulk product uploads, price and inventory updates, catalog synchronization, and data validation. The solution runs scheduled tasks unattended, with error handling and automatic result reporting.'
     },
     achievement: {
       es: 'Reducción significativa del tiempo dedicado a procesos batch manuales en Shopify mediante automatización con Python, Playwright y Selenium.',
