@@ -310,7 +310,7 @@ const I18N = {
   'hero.eyebrow': { es: '// Especialista TI', en: '// IT Specialist' },
   'hero.greeting': { es: 'Hola, soy', en: "Hi, I'm" },
   'hero.desc': {
-    es: 'Bachiller en Ingeniería de Sistemas e Informática, egresada en el Décimo Superior de la Universidad Nacional de Moquegua. Combino análisis de datos, automatización de procesos (RPA) e inteligencia artificial para construir soluciones que resuelven problemas reales en minería y tecnología.',
+    es: 'Bachiller en Ingeniería de Sistemas e Informática, egresada en el Décimo Superior de la Universidad. Combino análisis de datos, automatización de procesos (RPA) e inteligencia artificial para construir soluciones que resuelven problemas reales en minería y tecnología.',
     en: 'Systems Engineering graduate, ranked in the top 10 of her class at Universidad Nacional de Moquegua. I combine data analysis, process automation (RPA) and artificial intelligence to build solutions that solve real problems in mining and technology.'
   },
   'hero.ctaProjects': { es: 'Ver proyectos', en: 'View projects' },
